@@ -1,0 +1,21 @@
+@charset "utf-8";
+/*************************************
+*文件名称：worktable.css
+*作者：冯艳红
+*制造日期：09-07
+*联系方式：fengyanhong@ceopen.cn
+*文件版本：V1.0
+*内容概要：工作台样式
+*************************************/
+
+.worktable-moudle{width:830px;clear:both;border:1px solid #c9ced3;margin-bottom:6px;}
+.worktable-moudle h1{height:22px;background:url(../images/background/bg-toolbar.gif) repeat-x top;text-indent:5px;color:#1a5773;font-weight:bold;line-height:22px;border-bottom:1px solid #c9ced2;}
+.moudle-list{clear:both;margin:5px;}
+.moudle-list li{height:22px;}
+.moudle-list span{float:left;}
+.moudle-list-number{margin-left:150px;}
+.moudle-list-number a{font-weight:bold;color:#bd2e07;}
+.moudle-list-number a:hover{text-decoration:underline;}
+.moudle-left{margin:5px;float:left;}
+.moudle-grid{width:400px;margin:6px 15px 6px 0;}
+.pie-chart{margin:6px 0 6px 0;}

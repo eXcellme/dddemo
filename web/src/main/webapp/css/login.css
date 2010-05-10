@@ -1,0 +1,40 @@
+@charset "utf-8";
+@import url("common.css");
+/*************************************
+*文件名称：login.css
+*作者：冯艳红
+*制造日期：09-04
+*联系方式：fengyanhong@ceopen.cn
+*内容概要：登录页样式
+*************************************/
+
+body,html{margin:0;padding:0;height:100%;text-align:center;overflow:hidden;}
+form{height:100%;}
+.login-bg{width:100%;height:100%;background: #bcd1dd url(../images/background/bg-login.gif) repeat-x top center;}
+
+/*******登录信息********/
+.login-content-layout{width:340px; height:350px; left:50%; top:38%;margin:-150px 0 0 -300px; position:absolute; }
+.bg-login-content{width:620px;height:350px;background:url(../images/background/bg-login-content.gif) no-repeat center center;position:relative;}
+.login-content{width:200px;position:absolute;bottom:100px;right:50px;}
+.login-content ul{height:30px;clear:both;}
+.login-content li{float:left;}
+.login-content label{width:57px;line-height:22px;text-align:left;font-weight:bold;height:18px;display:block;color:#fff;}
+.input-area{height:18px;}
+.input-area li{float:left;}
+.input-area li img{margin-left:5px;}
+.input-middle-info{width:125px;}
+.input-middle-verificate{width:60px;}
+.input-left, .input-right{width:4px;height:22px;margin-top:0;*margin-top:1px;background: url(../images/background/bg-login-input-lr.gif) no-repeat 0 0;.}
+.input-right{background: url(../images/background/bg-login-input-lr.gif) no-repeat 0 -22px;}
+.input-info,.input-verificate{width:125px;height:20px;border-left:none;border-right:none;background-color:#fff;border-top:1px solid #828a8c;border-bottom:1px solid #828a8c;}
+.input-verificate{width:60px;}
+.btn-enter-over,.btn-enter-out{width:81px;height:32px;line-height:35px;font-size:14px;font-weight:bold;cursor:pointer;background: url(../images/others/btn-enter-over.gif) no-repeat center center;position:absolute;bottom:55px;right:112px;}
+.btn-enter-out{background: url(../images/others/btn-enter-out.gif) no-repeat center center;}
+
+/*******中企信息*******/
+.login-copyright{width:340px;height:73px;bottom:80px;margin:auto; position:relative;}
+.login-copyright li{float:left;margin-left:15px;}
+.login-copyright li p{text-align:left;float:left;line-height: 1.3em;margin-top:5px;color:#053649;}
+.ce-logo{width:88px;height:73px;_height:66px;margin-top:5px;}
+html>body .ce-logo{background: url(../images/others/ce-logo.png) no-repeat left 5px;}
+*html .ce-logo{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled="true", sizingMethod="scale", src='images/others/ce-logo.png')_background-image: none;}

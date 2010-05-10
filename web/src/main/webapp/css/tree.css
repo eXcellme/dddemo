@@ -1,0 +1,86 @@
+.tree{
+	text-align: left;
+	overflow: auto;
+}		
+.tree * {
+	font-family: "宋体", Arial, sans-serif, Verdana;
+	font-size: 12px;
+	-moz-user-select: none;
+	padding: 0;
+	margin: 0;
+	white-space: nowrap;
+}
+.tree button,.tree img {
+	border: 0px;
+	vertical-align: middle;
+	white-space: nowrap;
+	padding: 0px;
+	height: 18px;
+	width: 18px;
+	blr: expression(this . onFocus = this . blur() ); /*ie opera*/
+	outline: none;
+	-moz-outline-style: none;
+	cursor: pointer;
+}
+.tree span {
+	cursor: pointer;
+}
+.tree .tree-node-selected {
+	border: 1px solid #FDD14C;;
+	background-color: #FEEC8C;
+}
+/*****-----------------------------------------------------------*****
+.tree .tree-node-leaf {
+	background: url('/images/page.gif') center no-repeat;!important;
+}
+.tree .tree-node-folder {
+	background: url('/images/folder.gif') center no-repeat;!important;
+}
+.tree .tree-node-folderopen {
+	background: url('/images/folderopen.gif') center no-repeat;!important;
+}
+.tree .tree-node-ct {
+	display: none;
+}
+.tree .tree-blank {
+	background: url('/images/s.gif') center no-repeat;
+}
+.tree .tree-line {
+	background: url('/images/line.gif') center no-repeat;!important;
+}
+.tree .tree-elbow {
+	background: url('/images/join.gif') center no-repeat;!important;
+}
+.tree .tree-elbow-end {
+	background: url('/images/joinbottom.gif') center no-repeat;!important;
+}
+.tree .tree-elbow-plus {
+	background: url('/images/plus.gif') center no-repeat;!important;
+}
+.tree .tree-elbow-end-plus {
+	background: url('/images/plusbottom.gif') center no-repeat;!important;
+}
+.tree .tree-elbow-minus {
+	background: url('/images/minus.gif') center no-repeat;!important;
+}
+.tree .tree-elbow-end-minus {
+	background: url('/images/minusbottom.gif') center no-repeat;!important;
+}
+*****-----------------------------------------------------------*****/
+.tree .tree-node-checkbox {
+	vertical-align: middle;
+	white-space: nowrap;
+	padding: 0px;
+	height: 14px;
+	width: 14px;
+	border: 0px;
+	cursor: pointer;
+}
+.tree .tree-node-disabled .tree-node-text {
+	color: gray !important;
+}
+.tree .tree-node-disabled .tree-node-icon {
+	-moz-opacity: 0.5;
+	opacity: .5;
+	filter: alpha(opacity = 50);
+}

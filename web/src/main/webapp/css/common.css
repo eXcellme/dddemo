@@ -1,0 +1,109 @@
+@charset "utf-8";
+/*************************************
+*文件名称：common.css
+*作者：冯艳红
+*制造日期：09-04
+*联系方式：fengyanhong@ceopen.cn
+*文件版本：V1.0
+*内容概要：公用元素样式
+*************************************/
+
+html{overflow: hidden;}
+body{margin:0;padding:0;}
+td,th,li,p,span,textarea,div,h1,h2,h3{font-family: "宋体", Arial, Verdana;font-size: 12px;}
+*{padding:0;margin:0;}
+ul,li{list-style-type: none;}
+img,table{border:none;}
+img{vertical-align: middle;}
+a:focus{-moz-outline-style: none;}
+a{color:#5D7783;text-decoration: none;outline:none;}
+a:hover{color:#5D7783;text-decoration: underline;}
+.obj-max{width: 100%;height: 100%;}
+
+/*以下内容适用于表单输入组件*/
+input,select,textarea{vertical-align: middle;}
+select{background-color:#FFFFFF;}
+input{-moz-outline-style: none;outline:none;}
+/*文本框一般样式*/
+.input-common {border:1px solid #878787;background-color:#ffffff;height:16px;padding:3px 2px 1px 2px;}
+/*文本框不可用样式*/
+.input-disable {border:1px solid #D7D7D7; background-color:#FAFAFA ;height:16px;padding:3px 2px 1px 2px;}
+/*多行文本框样式*/
+textarea{border:1px solid #babfc0;background-color:#ffffff;width:80%;height:48px;}
+/**文本框通用长度**/
+/*1-10个汉字*/
+.input-word-2{width:35px;}
+.input-word-5{width:64px;}
+.input-word-10{width:128px;}
+/*10-20个汉字内*/
+.input-word-20{width:240px;}
+
+/**文本框特殊长度**/
+/*日期*/
+.input-date{width:83px;}
+/*时间（HH:MM:SS）、电话号码区号（4位）*/
+.input-tc{width:50px;}
+/*电话号码（8位）*/
+.input-telephone{width:70px;}
+/*下拉框通用长度*/
+
+/*1-5个汉字*/
+.select-word-5{width:70px;}
+/*5-10个汉字*/
+.select-word-10{width:135px;}
+/*10-20个汉字内*/
+.select-word-20{width:252px;}
+
+/*文本对齐*/
+.align-left{text-align:left;}
+.align-right{text-align:right;}
+.align-center{text-align:center;}
+
+/*命令按钮*/
+.btn-order{cursor:pointer;margin-right:4px;}
+.btn-order ul,.btn-order li{float:left;}
+.btn-order .left-normal, .btn-order .right-normal, .btn-order .left-over, .btn-order .right-over{width:3px;height:22px;}
+.btn-order .middle-normal, .btn-order .middle-over{height:22px;_height:18px;line-height:22px;text-align:center;padding-left:8px;padding-right:8px;_padding-top:4px;white-space:nowrap;display:block;border:0;}
+.btn-order .middle-over a{text-decoration: none;}
+.btn-order .middle-normal img, .btn-order .middle-over img{margin-right:5px;} 
+
+/*命令按钮正常状态*/
+.btn-order .left-normal, .grid-btn-order .left-normal{background:url(../images/background/bg-btn-lr.gif) no-repeat 0 0;}
+.btn-order .middle-normal, .grid-btn-order .middle-normal{background:url(../images/background/bg-btn-middle.gif) repeat-x 0 0;}
+.btn-order .right-normal, .grid-btn-order .right-normal{background:url(../images/background/bg-btn-lr.gif) no-repeat 0 -22px;}
+
+/*命令按钮鼠标滑过状态*/
+.btn-order .left-over, .grid-btn-order .left-over{background:url(../images/background/bg-btn-lr.gif) no-repeat 0 -44px;}
+.btn-order .middle-over, .grid-btn-order .middle-over{background: url(../images/background/bg-btn-middle.gif) repeat-x 0 -22px;}
+.btn-order .right-over, .grid-btn-order .right-over{background:url(../images/background/bg-btn-lr.gif) no-repeat 0 -66px;}
+
+/*必填项样式*/
+.form-require{background: url(../images/others/img-form-require.gif) no-repeat 3px center;}
+
+/*线的样式*/
+.border{border:1px solid #c9ced3;}
+.border-lbr{border:1px solid #c9ced3;border-top:none;}
+.border-ltr{border:1px solid #c9ced3;border-bottom:none;}
+
+/*2分栏、4分栏、6分栏表单填充样式*/
+.form-2column, .form-4column, .form-6column{width:100%;clear:both;}
+.form-2column th, .form-4column th, .form-6column th{height:30px;vertical-align: middle;text-align:right;font-weight:normal;cursor:default;}
+.form-2column td, .form-4column td, .form-6column td{padding:1px 8px 1px 8px;*padding:0px 8px 0px 8px;height:26px;word-break:break-all;word-wrap:break-word;}
+.form-2column td img, .form-4column td img, .form-6column td img{cursor:pointer;margin-left:5px;}
+/*2、4列表单适用*/
+.form-2column th, .form-4column th{width:20%;}
+.form-2column td {width:80%;}
+.form-4column td {width:30%;}
+/*6列表单适用*/
+.form-6column th, .form-6column td{width:15%;}
+/*备注td高度*/
+.form-3row{height:48px;display:block;text-align: justify;overflow-y: auto;overflow-x:hidden;line-height:1.5em;vertical-align: top;}
+.form-margin{margin-bottom:5px;}
+.form-margin-line{margin:0 10px 5px 10px;border: 1px solid #CCC;}
+
+/*树目录页面布局*/
+.tree-left{width:180px;background-color:#FFF;float:left;border:1px solid #c9ced3;border-top:none;} 
+.tree-left h1{text-indent:10px;line-height:24px;height:24px;background-color:#CCC;}
+.tree-right{margin:0 0 0 188px;}
+.tree-height{height:100%;}
+.float-left{float:left;}

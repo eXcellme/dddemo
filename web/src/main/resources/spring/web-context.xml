@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
+	default-autowire="byName">
+
+	<context:annotation-config />
+	<!-- 使用annotation 自动注册bean,并保证@Required,@Autowired的属性被注入 -->
+	<context:component-scan base-package="com.redhat.demo" />
+	
+	<bean id="functionEntityTreeModel" class="com.redhat.redwork.widget.tree.EntityTreeModelImpl">
+		<property name="className" value="com.redhat.demo.domain.FunctionEntity"></property>
+		<property name="idProperty" value="id"></property>
+		<property name="parentProperty" value="parent.id"></property>
+		<property name="textProperty" value="alias"></property>
+	</bean>
+	
+	<!-- lingen.liu 配置功能实体中功能实体类型下拉框组件 -->
+	<bean id="functionEntityTypeClass"
+		class="com.redhat.redwork.widget.dropdown.EntityDropdownDataModel">
+		<property name="className" value="com.redhat.demo.domain.FunctionEntityType"></property>
+		<property name="labelProperty" value="name"></property>
+		<property name="valueProperty" value="id"></property>
+	</bean>
+
+</beans>
