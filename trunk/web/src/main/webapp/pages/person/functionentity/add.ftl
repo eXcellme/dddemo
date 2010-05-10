@@ -89,7 +89,7 @@
         <li class="right-normal" id="btn1_13"></li>
       </ul>
     </div>
-    <div class="btn-order" onclick="page('permissions/tree.action')">
+    <div class="btn-order" onclick="goBack()">
       <ul>
         <li class="left-normal" id="btn1_21"></li>
         <li class="middle-normal" id="btn1_22" onmouseover="btn_change_over(2)" onmouseout="btn_change_out(2)" onblur="btn_change(2)"><img src="${contextPath}/images/ico16/ico-back.gif" alt=""/>返 回</li>
