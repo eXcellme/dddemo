@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<!-- 规约：主键在8000以上 -->
+	<AUTH_RESOURCES id="8001" version="0"  name="会员管理" parentId="-1" value="user manager" resourcesTypeId="2"/>
+	<AUTH_RESOURCES id="8002" version="0"  name="新建" parentId="1" value="new" resourcesTypeId="2"/>
+	<AUTH_RESOURCES id="8003" version="0" name="修改" parentId="1" value="modify" resourcesTypeId="2"/>
+	<AUTH_RESOURCES id="8004" version="0" name="删除" parentId="1" value="delete" resourcesTypeId="2"/>
+</dataset>

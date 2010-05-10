@@ -1,0 +1,30 @@
+﻿/*************************************
+*文件名称：left-nav.css
+*作者：陈相登
+*制造日期：09-06
+*联系方式：chenxiangdeng@ceopen.cn
+*内容概要：左侧导航
+*************************************/
+
+html {height: 100%;}
+body {margin: 0;height: 100%;background-color: #eceff0;}
+.right-content {position: absolute;left: 170px;top: 0;width: 100%;height: 100%;background-color: #fff;border-left:1px solid #acb2b8;border-top:1px solid #bbcee0;overflow-y: auto;overflow-x:hidden;}
+.nav-header {width: 170px;height: 34px;position: absolute;top:0;left: 0;background: url(../images/background/bg-nav-title.gif) repeat-x 0 0;line-height: 34px;_height:29px;_padding-top:4px;font-weight: bold;text-indent:10px;z-index: 1000}
+.nav-second {width: 170px;height: auto;background-color: #eceff0;position: absolute;top: 34px;left: 0;overflow-x: hidden;overflow-y: auto;}
+.nav-second ul {position: relative;}
+.nav-second li {width:100%;padding: 7px 0 7px 15px;cursor:pointer;}
+.nav-second li.hover {background-color: #c7cbcd;}
+.nav-first {width: 170px;position: absolute;bottom: 0;left: 0;background: #eceff0;}
+.nav-first ul {width:100%;}
+.nav-first ul li div.button {width: 100%;}
+.nav-first ul li div ul li {height: 36px; float:left;cursor:pointer;font-weight:bold;text-indent:10px;}
+.nav-first ul li div ul br {clear: both}
+.nav-first ul li div ul li.normal-left {width: 1px; background:url(../images/background/bg-nav-first.gif) no-repeat 0 0;}
+.nav-first ul li div ul li.normal-middle {width: 168px;background:url(../images/background/bg-nav-first.gif) repeat-x 0 0;line-height: 37px;_height:31px;_padding-top:5px;}
+.nav-first ul li div ul li.normal-right {width: 1px;background:url(../images/background/bg-nav-first.gif) no-repeat 0 0;}
+.nav-first ul li div ul li.hover-left {width: 1px;background:#1b5775; }
+.nav-first ul li div ul li.hover-middle {;width: 168px;background:#1b5775;line-height: 37px;color:#fff;}
+.nav-first ul li div ul li.hover-right {width: 1px;background:#1b5775;}
+.nav-header img, .nav-first ul li div ul li.normal-middle img, .nav-first ul li div ul li.hover-middle img{margin-right:5px;}
+.nav-first ul li div ul li.left-over, .nav-first ul li div ul li.right-over{width:1px;background:url(../images/background/bg-nav-first.gif) no-repeat 0 -36px;}
+.nav-first ul li div ul li.mid-over{width:168px;background:url(../images/background/bg-nav-first.gif) repeat-x 0 -36px;}

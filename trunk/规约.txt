@@ -1,0 +1,17 @@
+要mvn install本项目，请确保安装了mysql数据库（推荐5.1以上版本），用户为root，密码为1234
+若要修改密码，请修改parent pom中的<jdbc.password>1234</jdbc.password>属性
+
+
+=============Spring============
+spring配置文件放在spring文件夹中，命名规范：
+以“模块名-context.xml”命名
+aop和persistence配置分别命名为：aop-context.xml和persistence-context.xml
+
+=============单元测试============
+需要使用数据库的单元测试：继承AbstractIntegratedTestCase基类（支持spring xml load和dbunit）
+不需要使用数据库，仅仅需要加载spring的单元测试：继承PureSpringTestCase基类
+注意：这些基类会自动加载classpath中spring目录下的配置文件
+
+=============单元数据集============
+测试数据集的记录id统一使用8000以上。8000以下的id预留给系统初始化
+测试数据集，在test/resources/dataset目录下，以每个开发人员各自的姓名建立子目录，在子目录下放置dbunit的数据集，进行单元测试

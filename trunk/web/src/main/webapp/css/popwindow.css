@@ -1,0 +1,24 @@
+﻿@import url("common.css");
+/*************************************
+*文件名称：list.css
+*作者：冯艳红
+*制造日期：09-07
+*联系方式：fengyanhong@ceopen.cn
+*内容概要：弹出窗口
+*************************************/
+
+body, html{overflow:hidden;height:100%;margin:0;}
+body{background-color:#eaeeef;}
+
+.popwindow-container{margin:6px;background-color:#fff;border:1px solid #d0d3d5;display:inline-block;}
+
+/*窗口标题*/
+.popwindow-title{width:100%;height:24px;line-height:24px;color:#1c5775;font-weight:bold;text-indent:5px;background-color:#D2D5D7;}
+
+/*命令按钮*/
+.popwindow-btn-area{height:22px;bottom:0;right:0;position:absolute;margin-right:3px;}
+.popwindow-btn-area div{float:left;}
+
+/*内容窗口*/
+.popwindow-content{padding:10px;text-align:center; }
+
