@@ -453,29 +453,14 @@
 
 	<repositories>
 		<repository>
-			<id>dayatang-releases</id>
-			<url>http://www.dayatang.com/m2/internal</url>
+			<id>internal-repository</id>
+			<url>http://10.108.10.122/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
 			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>dayatang-snapshots</id>
-			<url>http://www.dayatang.com/m2/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-		</repository>
-		<repository>
-			<id>org.xi8ix</id>
-			<name>xi8ix</name>
-			<url>http://maven.xi8ix.org/</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
