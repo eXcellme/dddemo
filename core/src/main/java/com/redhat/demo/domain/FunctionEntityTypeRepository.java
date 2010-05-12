@@ -5,10 +5,10 @@ import com.dayatang.domain.BaseEntityRepository;
 public interface FunctionEntityTypeRepository extends BaseEntityRepository<FunctionEntityType, Long>{
 	
 	/**
-	 * 判断当前实体是否存在
+	 * 根据实例查询
 	 * @param fType
 	 * @return
 	 */
-	public boolean isExist(FunctionEntityType fType);
+	public FunctionEntityType findbyExample(FunctionEntityType fType);
 
 }

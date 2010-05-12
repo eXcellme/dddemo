@@ -30,6 +30,12 @@
 			<version>${dayatang.commons.version}</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>com.dayatang.commons</groupId>
+			<artifactId>dayatang-commons-i18n</artifactId>
+			<version>${dayatang.commons.version}</version>
+		</dependency>
+		
 		<!-- for temp begin 
 		<dependency>
 			<groupId>org.dbunit</groupId>

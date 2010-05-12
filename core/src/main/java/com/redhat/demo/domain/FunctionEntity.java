@@ -16,6 +16,7 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
 
 import com.dayatang.domain.BaseEntity;
 import com.dayatang.domain.InstanceFactory;
+import com.redhat.demo.core.DemoResourceBundleI18nService;
 
 /**
  * 功能实体
@@ -167,7 +168,7 @@ public class FunctionEntity extends BaseEntity {
 				new Object[]{this.getName(),this.getAlias()});
 		
 		if(exists!=null && exists.isEmpty()==false){
-			throw new RuntimeException("当前实体对象名或别名已经存在");
+			throw new RuntimeException(DemoResourceBundleI18nService.getMessage("demo.functionentity.entityIsExist", "当前实体对象名或别名已经存在"));
 		}
 		
 		//默认激活状态
@@ -187,12 +188,12 @@ public class FunctionEntity extends BaseEntity {
 				new Object[]{this.getName(),this.getAlias(),this.getId()});
 		
 		if(exists!=null && exists.isEmpty()==false){
-			throw new RuntimeException("当前实体对象名或别名已经存在");
+			throw new RuntimeException(DemoResourceBundleI18nService.getMessage("demo.functionentity.entityIsExist", "当前实体对象名或别名已经存在"));
 		}
 		
 		//修改 避免id和parentid一致
 		if(this.getParent().getId().equals(this.getId())){
-			throw new RuntimeException("自身不能作为父实体");
+			throw new RuntimeException(DemoResourceBundleI18nService.getMessage("demo.functionentity.forbitExtendsSelf", "自身不能作为父实体"));
 		}
 		getFunctionEntityRepository().save(this);
 		
@@ -204,16 +205,10 @@ public class FunctionEntity extends BaseEntity {
 	 */
 	public void delete(){
 		
-		StringBuffer errMsg = null;
-		
 		//查找是否有子实体，有则异常提示：
 		List<FunctionEntity> childNode = getChild();
 		if(childNode!=null && !childNode.isEmpty()){
-			errMsg = new StringBuffer("删除失败！需要先删除其包含的子实体：");
-			for (FunctionEntity child : childNode) {
-				errMsg.append(child.getAlias()).append(",");
-			}
-			throw new RuntimeException(errMsg.toString());
+			throw new RuntimeException(DemoResourceBundleI18nService.getMessage("demo.functionentity..haveChildNode", "请删除所关联的子实体再完成删除操作"));
 		}
 	
 		//delete

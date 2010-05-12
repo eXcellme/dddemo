@@ -17,8 +17,9 @@ public class FunctionEntityTypeRepositotyImpl extends BaseEntityRepositoryHibern
 		super(FunctionEntityType.class);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public boolean isExist(FunctionEntityType fType) {
+	public FunctionEntityType findbyExample(FunctionEntityType fType) {
 		
 		DetachedCriteria criteria = DetachedCriteria.forClass(FunctionEntityType.class);
 		
@@ -27,7 +28,7 @@ public class FunctionEntityTypeRepositotyImpl extends BaseEntityRepositoryHibern
 		criteria.add(Restrictions.eq("name", fType.getName()));
 		
 		List list = getHibernateTemplate().findByCriteria(criteria);
-		return list!=null && list.size()>0;
+		return (FunctionEntityType) ((list!=null && list.size()>0)?list.iterator().next():null);
 	}
 
 }

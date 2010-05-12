@@ -13,6 +13,7 @@ import org.hibernate.validator.constraints.Length;
 
 import com.dayatang.domain.BaseEntity;
 import com.dayatang.domain.InstanceFactory;
+import com.redhat.demo.core.DemoResourceBundleI18nService;
 
 /**
  * 功能实体类型
@@ -87,8 +88,10 @@ public class FunctionEntityType extends BaseEntity {
 	 * 新增一个功能实体类型
 	 */
 	public void add() {
-		if(getFunctionEntityTypeRepository().isExist(this)){
-			throw new RuntimeException("当前实体已经存在");
+		if(this.isExist()){
+			String ex = DemoResourceBundleI18nService.getMessage(
+					"auth.functionentitytype.entityTypeIsExist", "当前实体类型已经存在");
+			throw new RuntimeException(ex);
 		}
 		getFunctionEntityTypeRepository().save(this);
 	}
@@ -101,7 +104,7 @@ public class FunctionEntityType extends BaseEntity {
 		List<FunctionEntity> list = FunctionEntity.getFunctionEntityRepository().getFunctionEntityByType(this);
 		
 		if(list!=null && !list.isEmpty())
-			throw new RuntimeException("当前实体类型关联了功能实体，请解除关联再进行删除");
+			throw new RuntimeException(DemoResourceBundleI18nService.getMessage("demo.functionentitytype.typeBindentity", "请先解除与该实体类型关联的功能实体再进行删除"));
 		
 //		for (FunctionEntity functionEntity : list) {
 //			
@@ -114,8 +117,8 @@ public class FunctionEntityType extends BaseEntity {
 	 * 更新一个功能实体类型
 	 */
 	public void update() {
-		if(getFunctionEntityTypeRepository().isExist(this)){
-			throw new RuntimeException("当前实体已经存在");
+		if(this.isExist()){
+			throw new RuntimeException(DemoResourceBundleI18nService.getMessage("demo.functionentitytype.entityTypeIsExist", "当前实体类型已经存在"));
 		}
 		getFunctionEntityTypeRepository().save(this);
 	}
@@ -127,5 +130,13 @@ public class FunctionEntityType extends BaseEntity {
 	 */
 	public static FunctionEntityType get(long id){
 		return getFunctionEntityTypeRepository().get(id);
+	}
+	
+	/**
+	 * 判断当前对象是否存在
+	 * @return
+	 */
+	public boolean isExist(){
+		return getFunctionEntityTypeRepository().findbyExample(this)!=null;
 	}
 }
