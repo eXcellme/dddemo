@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.dayatang.domain.InstanceFactory;
 import com.dayatang.querychannel.service.QueryChannelService;
 import com.redhat.demo.application.FunctionEntityTypeApplication;
+import com.redhat.demo.core.DemoResourceBundleI18nService;
 import com.redhat.demo.domain.FunctionEntityType;
 
 /**
@@ -55,7 +56,7 @@ public class FunctionEntityTypeApplicationImpl implements
 		FunctionEntityType entityType = get(id);
 		
 		if(entityType==null)
-			throw new RuntimeException("当前删除对象不存在");
+			throw new RuntimeException(DemoResourceBundleI18nService.getMessage("demo.functionentitytype.entityTypeIsNotExist", "当前实体类型不存在"));
 		entityType.remove();
 	}
 	

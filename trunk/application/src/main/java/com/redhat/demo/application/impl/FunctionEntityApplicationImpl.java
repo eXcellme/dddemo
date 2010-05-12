@@ -13,8 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.dayatang.domain.InstanceFactory;
 import com.dayatang.querychannel.service.QueryChannelService;
 import com.redhat.demo.application.FunctionEntityApplication;
+import com.redhat.demo.core.DemoResourceBundleI18nService;
 import com.redhat.demo.domain.FunctionEntity;
-import com.redhat.demo.domain.FunctionEntityType;
 import com.redhat.demo.domain.FunctionEntity.Status;
 
 /**
@@ -81,7 +81,7 @@ public class FunctionEntityApplicationImpl implements FunctionEntityApplication 
 	public FunctionEntity getFunctionEntityById(Long id) {
 		FunctionEntity entity = FunctionEntity.getFunctionEntityRepository().get(id);
 		if(entity == null)
-			throw new RuntimeException("当前功能实体不存在");
+			throw new RuntimeException(DemoResourceBundleI18nService.getMessage("demo.functionentity.entityIsNotExist", "当前功能实体不存在"));
 		return entity;
 	}
 

@@ -27,7 +27,12 @@ public class FunctionEntityTypeAction extends ActionSupport implements RedworkAc
 	 * @return 返回列表页面
 	 */
 	public String addFunctionEntityType(){
-		functionEntityTypeAppliaction.save(type);
+		try {
+			functionEntityTypeAppliaction.save(type);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return "functionEntityType_list";
 	}
     
