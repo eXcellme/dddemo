@@ -48,7 +48,7 @@ public class FunctionEntityTypeApplicationImpl implements
 	 */
 	@Override
 	public void save(FunctionEntityType type) {
-		type.add();
+		type.create();
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class FunctionEntityTypeApplicationImpl implements
 		
 		if(entityType==null)
 			throw new RuntimeException(DemoResourceBundleI18nService.getMessage("demo.functionentitytype.entityTypeIsNotExist", "当前实体类型不存在"));
-		entityType.remove();
+		entityType.delete();
 	}
 	
 }
