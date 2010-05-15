@@ -127,13 +127,23 @@ if(legal){
   $.ajax({                                                
     type: "POST",                                     
     url: "save.action",                                   
-    data: $("#saveform").formToArray(),   
-    success: function(msg){                 
-	  goBack();                  
-    } ,
-    error:function(xmlhttp,textStatus, errorThrown){
-        alert("error："); 
-    }
+    data: $("#saveform").serialize() + '&struts.enableJSONValidation=true&struts.validateOnly=true', 
+    complete: function(data, textStatus){
+					var text = data.responseText;
+				    //validate exception
+					var errorsObject = StrutsUtils.getValidationErrors(text);
+				     //show errors, if any
+				     if(errorsObject && errorsObject.fieldErrors) {
+				        StrutsUtils.showValidationErrors(document.getElementById("form"), errorsObject);
+				     } else {
+				       var jsonData = eval("("+text+")"); 
+				       if(jsonData.msg){
+                          alert(jsonData.msg);
+				       }else{
+				          goBack();
+				       }
+				     }
+				 }
 }); 
 }
 

@@ -10,7 +10,7 @@
    </style>
 </head>
 <body>
-<@s.url var="createurl" action="addFunctionEntityType" namespace="/permissions" />
+<@s.url var="createurl" action="addFunctionEntityType" namespace="/functionentity" />
 <#assign contextPath = request.contextPath/>
 <div class="page-top-bar">
 <ul class="path">权限管理<span>&gt;</span><a href="javascript:void(0)">功能实体类型管理</a><span>&gt;</span>新建功能实体类型</ul>
@@ -79,12 +79,18 @@ $(function(){
 				data: $("#form").serialize() + '&struts.enableJSONValidation=true&struts.validateOnly=true',
 				complete: function(data, textStatus){
 					var text = data.responseText;
+				    //validate exception
 					var errorsObject = StrutsUtils.getValidationErrors(text);
 				     //show errors, if any
 				     if(errorsObject && errorsObject.fieldErrors) {
 				        StrutsUtils.showValidationErrors(document.getElementById("form"), errorsObject);
 				     } else {
-				       page('functionEntityType_list.action');
+				       var jsonData = eval("("+text+")"); 
+				       if(jsonData.msg){
+                          alert(jsonData.msg);
+				       }else{
+				          page('functionEntityType_list.action');
+				       }
 				     }
 				 }
 			});

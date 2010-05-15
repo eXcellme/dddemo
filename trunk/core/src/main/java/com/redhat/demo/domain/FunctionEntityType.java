@@ -87,7 +87,7 @@ public class FunctionEntityType extends BaseEntity {
 	/**
 	 * 新增一个功能实体类型
 	 */
-	public void add() {
+	public void create() {
 		if(this.isExist()){
 			String ex = DemoResourceBundleI18nService.getMessage(
 					"auth.functionentitytype.entityTypeIsExist", "当前实体类型已经存在");
@@ -99,7 +99,7 @@ public class FunctionEntityType extends BaseEntity {
 	/**
 	 * 移除一个功能实体类型
 	 */
-	public void remove() {
+	public void delete() {
 		
 		List<FunctionEntity> list = FunctionEntity.getFunctionEntityRepository().getFunctionEntityByType(this);
 		
