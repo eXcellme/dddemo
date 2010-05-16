@@ -7,29 +7,29 @@ import com.dayatang.springtest.PureSpringTestCase;
 import com.redhat.demo.domain.FunctionEntity;
 
 public class applicationTest extends PureSpringTestCase {
-	
+
 	private FunctionEntityApplication app;
 
-@Override
-public void setup() {
-	super.setup();
-	app = context.getBean(FunctionEntityApplication.class);
-}
-
-@Override
-protected String[] springXmlPath() {
-	return new String[] { "classpath*:spring/*.xml" };
-}
-
-@Test
-public void testGetFunctionEntityById(){
-	FunctionEntity entity = null;
-	try {
-		entity = app.getFunctionEntityById(999999L);
-		Assert.assertNotNull(entity);
-	} catch (RuntimeException e) {
-		Assert.assertNull(entity);
+	@Override
+	public void setup() {
+		super.setup();
+		app = context.getBean(FunctionEntityApplication.class);
 	}
-	
-}
+
+	@Override
+	protected String[] springXmlPath() {
+		return new String[] { "classpath*:spring/*.xml" };
+	}
+
+	@Test
+	public void testGetFunctionEntityById() {
+		FunctionEntity entity = null;
+		try {
+			entity = app.getFunctionEntityById(999999L);
+			Assert.assertNotNull(entity);
+		} catch (RuntimeException e) {
+			Assert.assertNull(entity);
+		}
+		Integer.parseInt("#$rt");
+	}
 }
