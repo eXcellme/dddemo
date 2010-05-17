@@ -30,6 +30,6 @@ public class applicationTest extends PureSpringTestCase {
 		} catch (RuntimeException e) {
 			Assert.assertNull(entity);
 		}
-		Integer.parseInt("#$rt");
+
 	}
 }
