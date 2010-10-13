@@ -3,6 +3,7 @@ package com.redhat.demo.application;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.dayatang.domain.InstanceFactory;
 import com.dayatang.springtest.PureSpringTestCase;
 import com.redhat.demo.domain.FunctionEntity;
 
@@ -13,7 +14,7 @@ public class applicationTest extends PureSpringTestCase {
 	@Override
 	public void setup() {
 		super.setup();
-		app = context.getBean(FunctionEntityApplication.class);
+		app = InstanceFactory.getInstance(FunctionEntityApplication.class);
 	}
 
 	@Override
