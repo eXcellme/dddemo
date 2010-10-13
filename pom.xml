@@ -468,6 +468,26 @@
 	<repositories>
 		<repository>
 			<id>internal-repository</id>
+			<url>http://www.dayatang.com/maven2/internal</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>snapshots-repository</id>
+			<url>http://www.dayatang.com/maven2/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>internal-repository</id>
 			<url>http://10.108.10.122/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
@@ -477,6 +497,7 @@
 			</snapshots>
 		</repository>
 	</repositories>
+
 	<pluginRepositories>
 		<pluginRepository>
 			<id>dayatang</id>
